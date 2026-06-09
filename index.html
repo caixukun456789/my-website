@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="一个可以后续修改的个人网站：介绍我、展示项目、记录想法，并提供联系方式。" />
+  <meta property="og:title" content="我的个人网站" />
+  <meta property="og:description" content="认识我、我的作品和正在探索的事情。" />
+  <meta property="og:type" content="website" />
+  <title>我的个人网站</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Ctext x='32' y='41' font-size='30' text-anchor='middle' fill='%23f8fafc'%3E我%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">我</span>
+        <span class="brand-text">个人网站</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">关于</a>
+        <a href="#projects">作品</a>
+        <a href="#notes">想法</a>
+        <a href="#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">你好，欢迎来到我的小宇宙</p>
+        <h1 id="hero-title" data-site="hero.title">一个可以不断生长的个人网站</h1>
+        <p class="hero-text" data-site="hero.subtitle">这里可以放你的自我介绍、作品、简历、博客、学习记录，之后想改什么都很方便。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">看看作品</a>
+          <a class="button ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="网站状态卡片">
+        <div class="orbit" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="card-kicker">当前主题</p>
+        <h2>探索 · 创造 · 记录</h2>
+        <p>把正在做的事情整理出来，让未来的自己和别人都能快速了解你。</p>
+        <dl class="quick-stats">
+          <div><dt>页面</dt><dd>1</dd></div>
+          <div><dt>可改</dt><dd>100%</dd></div>
+          <div><dt>风格</dt><dd>清爽</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section split" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">关于我</h2>
+      </div>
+      <div class="section-body">
+        <p data-site="about.body">我喜欢把复杂的事情变简单，也喜欢做能被真正用起来的东西。这个网站先用通用内容占位，之后你可以把它改成个人主页、作品集、博客首页，或者一个创业项目介绍页。</p>
+        <ul class="pill-list" aria-label="我的关键词">
+          <li>学习</li>
+          <li>创造</li>
+          <li>产品</li>
+          <li>效率</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">可以展示的内容</h2>
+        <p>先放三个示例卡片，之后可以换成你的真实项目、文章、服务或作品。</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="card-number">01</span>
+          <h3>我的作品集</h3>
+          <p>展示你做过的项目、截图、链接和成果。适合放设计、代码、运营案例。</p>
+          <a href="#contact" aria-label="了解我的作品集">了解更多</a>
+        </article>
+        <article class="project-card accent-card">
+          <span class="card-number">02</span>
+          <h3>我的记录本</h3>
+          <p>写学习笔记、读书总结、灵感碎片，把长期积累变成可见资产。</p>
+          <a href="#notes" aria-label="查看我的记录本">查看想法</a>
+        </article>
+        <article class="project-card">
+          <span class="card-number">03</span>
+          <h3>我的服务页</h3>
+          <p>如果你以后想接项目，可以在这里说明你能提供什么、流程和联系方式。</p>
+          <a href="#contact" aria-label="联系我了解服务">联系我</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section notes" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <p class="eyebrow">Notes</p>
+        <h2 id="notes-title">最近想法</h2>
+      </div>
+      <div class="note-list">
+        <article>
+          <time datetime="2026-06-09">2026-06-09</time>
+          <h3>从一个简单网站开始</h3>
+          <p>先有一个能打开、能修改、看起来舒服的网站，再慢慢加内容、加页面、加功能。</p>
+        </article>
+        <article>
+          <time datetime="2026-06-09">2026-06-09</time>
+          <h3>内容比复杂功能更重要</h3>
+          <p>网站真正有价值的地方，是让别人快速理解你是谁、你在做什么、你能带来什么。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">后续想怎么改都可以</h2>
+        <p>你可以告诉我：想换成什么名字、头像、配色、栏目、文案、项目，我可以继续帮你改成更像“你”的网站。</p>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+          <button class="button ghost" type="button" id="copy-path">复制网站路径</button>
+        </div>
+        <p class="copy-result" id="copy-result" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 我的个人网站。由静态 HTML / CSS / JS 制作。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
