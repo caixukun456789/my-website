@@ -11,22 +11,27 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230f172a'/%3E%3Ctext x='32' y='40' font-size='25' text-anchor='middle' fill='%23fff7ed'%3E懂%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="desktop-app">
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <header class="topbar">
-    <a class="brand" href="#main" aria-label="懂你首页">
-      <span class="brand-mark">懂</span>
-      <span><strong>懂你</strong><small>Link Dock</small></span>
-    </a>
-    <div class="top-actions">
-      <button class="icon-button" id="open-quick-add" type="button" title="快速添加链接（Ctrl/⌘ + K）">＋</button>
-      <button class="button subtle" id="toggle-view" type="button">卡片视图</button>
-      <button class="button dark" id="open-auth" type="button">注册 / 登录</button>
-    </div>
-  </header>
+  <div class="app-frame">
+    <header class="topbar" role="banner">
+      <div class="window-left">
+        <div class="traffic-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+        <a class="brand" href="#main" aria-label="懂你工作台">
+          <span class="brand-mark">懂</span>
+          <span><strong>懂你</strong><small>Link Dock</small></span>
+        </a>
+      </div>
+      <div class="window-title">链接管理工作台</div>
+      <div class="top-actions">
+        <button class="icon-button" id="open-quick-add" type="button" title="快速添加链接（Ctrl/⌘ + K）">＋</button>
+        <button class="button subtle" id="toggle-view" type="button">卡片视图</button>
+        <button class="button dark" id="open-auth" type="button">注册 / 登录</button>
+      </div>
+    </header>
 
-  <main id="main" class="app-shell">
+    <main id="main" class="app-shell">
     <aside class="sidebar" aria-label="链接分组">
       <section class="user-card">
         <div class="avatar" id="user-avatar">游</div>
@@ -63,13 +68,17 @@
       <section class="hero-card panel">
         <div>
           <p class="eyebrow">Native Link Manager</p>
-          <h2>原生感链接管理，只做链接与快速操作。</h2>
-          <p>根据种子用户反馈，懂你现在支持搜索、收藏夹、卡片视图、移动到分组、快捷键、菜单栏快速添加、更多 URL Scheme、编辑标题、自定义卡片背景和网页预览。</p>
+          <h2>今天的链接空间</h2>
+          <p>像桌面软件一样管理网页、论文、文章和工具入口。搜索、收藏、分组、快速添加都在同一个工作台里完成。</p>
         </div>
-        <div class="hero-orbit" aria-hidden="true"><span>⌘K</span><span>搜索</span><span>收藏</span></div>
+        <div class="hero-orbit" aria-hidden="true"><span>⌘K</span><span>Search</span><span>Fav</span></div>
       </section>
 
       <section class="command-bar panel" aria-label="链接操作区">
+        <div class="command-heading">
+          <strong>快速操作</strong>
+          <span>本地保存，不上传服务器</span>
+        </div>
         <label class="search-box"><span>搜索</span><input id="search-input" type="search" placeholder="搜索标题、链接、标签或分组" autocomplete="off" /></label>
         <form class="quick-form" id="quick-form">
           <input id="quick-title" type="text" placeholder="链接标题，可选" autocomplete="off" />
@@ -89,15 +98,20 @@
       <section class="links-section panel">
         <div class="section-title-row">
           <div><p class="eyebrow">Collection</p><h2 id="current-title">全部链接</h2></div>
-          <div class="view-tabs" role="tablist" aria-label="视图切换">
-            <button type="button" class="is-active" data-view="card">卡片</button>
-            <button type="button" data-view="list">列表</button>
+          <div class="collection-tools">
+            <span class="kbd-pill">1-6 分组</span>
+            <span class="kbd-pill">F 收藏</span>
+            <div class="view-tabs" role="tablist" aria-label="视图切换">
+              <button type="button" class="is-active" data-view="card">卡片</button>
+              <button type="button" data-view="list">列表</button>
+            </div>
           </div>
         </div>
         <div class="links-grid card-view" id="links-grid"></div>
       </section>
     </section>
-  </main>
+    </main>
+  </div>
 
   <dialog class="modal" id="auth-modal">
     <form method="dialog" class="modal-card" id="auth-form">
@@ -127,7 +141,10 @@
 
   <template id="empty-template"><div class="empty-state"><strong>还没有链接</strong><p>点击右上角“＋”或按 Ctrl/⌘ + K，快速添加第一个链接。</p></div></template>
 
-  <footer class="site-footer"><p>© <span id="year"></span> 懂你。数据默认保存在当前浏览器本地。</p></footer>
+  <footer class="site-footer">
+    <p><span id="status-line">Ready</span></p>
+    <p>© <span id="year"></span> 懂你。数据默认保存在当前浏览器本地。</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

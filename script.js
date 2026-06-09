@@ -33,7 +33,7 @@ const els = {
   groupList: $("#group-list"), addGroup: $("#add-group"), quickForm: $("#quick-form"), quickTitle: $("#quick-title"), quickUrl: $("#quick-url"), quickGroup: $("#quick-group"), quickColor: $("#quick-color"),
   searchInput: $("#search-input"), linksGrid: $("#links-grid"), currentTitle: $("#current-title"), totalCount: $("#total-count"), favoriteCount: $("#favorite-count"), groupCount: $("#group-count"), toggleView: $("#toggle-view"),
   editModal: $("#edit-modal"), editForm: $("#edit-form"), editId: $("#edit-id"), editTitle: $("#edit-title"), editUrl: $("#edit-url"), editGroup: $("#edit-group"), editTags: $("#edit-tags"), editColor: $("#edit-color"),
-  emptyTemplate: $("#empty-template"), openQuickAdd: $("#open-quick-add")
+  emptyTemplate: $("#empty-template"), openQuickAdd: $("#open-quick-add"), statusLine: $("#status-line")
 };
 
 els.year.textContent = new Date().getFullYear();
@@ -81,6 +81,7 @@ function renderGroups() {
 function buildGradient(seed) { let hash = 0; for (let i = 0; i < seed.length; i++) hash = seed.charCodeAt(i) + ((hash << 5) - hash); const hueA = Math.abs(hash) % 360; const hueB = (hueA + 54) % 360; return `linear-gradient(135deg, hsl(${hueA} 86% 68%), hsl(${hueB} 80% 76%))`; }
 function renderLinks() {
   const links = getVisibleLinks(); const activeGroup = getGroup(activeGroupId); els.currentTitle.textContent = activeGroup?.name || "全部链接"; els.totalCount.textContent = state.links.length; els.favoriteCount.textContent = state.links.filter((link) => link.favorite).length; els.linksGrid.className = `links-grid ${viewMode}-view`;
+  if (els.statusLine) els.statusLine.textContent = `${activeGroup?.name || "全部链接"} · ${links.length} 个结果 · ${viewMode === "card" ? "卡片视图" : "列表视图"}`;
   if (!links.length) { els.linksGrid.innerHTML = els.emptyTemplate.innerHTML; return; }
   const groupOptions = state.groups.filter((group) => !group.system).map((group) => `<option value="${group.id}">${group.icon} ${escapeHtml(group.name)}</option>`).join("");
   els.linksGrid.innerHTML = links.map((link) => {
