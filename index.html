@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="一个可以后续修改的个人网站：介绍我、展示项目、记录想法，并提供联系方式。" />
-  <meta property="og:title" content="我的个人网站" />
-  <meta property="og:description" content="认识我、我的作品和正在探索的事情。" />
+  <meta name="description" content="懂你：一个可后续扩展的个人文件库网站，用来整理论文、文章、笔记和资料。" />
+  <meta property="og:title" content="懂你" />
+  <meta property="og:description" content="整理论文、文章、笔记和资料的个人文件库。" />
   <meta property="og:type" content="website" />
-  <title>我的个人网站</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Ctext x='32' y='41' font-size='30' text-anchor='middle' fill='%23f8fafc'%3E我%3C/text%3E%3C/svg%3E" />
+  <title>懂你｜论文文章文件库</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Ctext x='32' y='41' font-size='26' text-anchor='middle' fill='%23f8fafc'%3E懂%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,14 +16,14 @@
   <header class="site-header">
     <nav class="nav" aria-label="主导航">
       <a class="brand" href="#top" aria-label="返回顶部">
-        <span class="brand-mark">我</span>
-        <span class="brand-text">个人网站</span>
+        <span class="brand-mark">懂</span>
+        <span class="brand-text">懂你</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
       <div class="nav-links" id="nav-links">
         <a href="#about">关于</a>
-        <a href="#projects">作品</a>
-        <a href="#notes">想法</a>
+        <a href="#library">文件库</a>
+        <a href="#guide">说明</a>
         <a href="#contact">联系</a>
       </div>
     </nav>
@@ -32,25 +32,27 @@
   <main id="main" class="page-shell">
     <section class="hero section" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">你好，欢迎来到我的小宇宙</p>
-        <h1 id="hero-title" data-site="hero.title">一个人叫潮男他就是邓棒棒</h1>
-        <p class="hero-text" data-site="hero.subtitle">这里可以放你的自我介绍、作品、简历、博客、学习记录，之后想改什么都很方便。</p>
+        <p class="eyebrow">Personal Knowledge Library</p>
+        <h1 id="hero-title">懂你</h1>
+        <p class="hero-text">一个帮你整理论文、文章、笔记和资料的个人文件库。先从浏览器本地储存开始，后续可以继续升级成云端资料库。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">看看作品</a>
-          <a class="button ghost" href="#contact">联系我</a>
+          <a class="button primary" href="#library">开始存文件</a>
+          <a class="button ghost" href="#guide">查看说明</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="网站状态卡片">
-        <div class="orbit" aria-hidden="true">
-          <span></span><span></span><span></span>
+      <aside class="hero-card" aria-label="文件库状态卡片">
+        <div class="vault-visual" aria-hidden="true">
+          <span class="folder folder-a"></span>
+          <span class="folder folder-b"></span>
+          <span class="folder folder-c"></span>
         </div>
-        <p class="card-kicker">当前主题</p>
-        <h2>探索 · 创造 · 记录</h2>
-        <p>把正在做的事情整理出来，让未来的自己和别人都能快速了解你。</p>
+        <p class="card-kicker">当前版本</p>
+        <h2>资料先放在你自己的浏览器里</h2>
+        <p>选择论文、文章、笔记或资料后，网页会保存到浏览器本地，不上传服务器，不公开给别人。</p>
         <dl class="quick-stats">
-          <div><dt>页面</dt><dd>1</dd></div>
-          <div><dt>可改</dt><dd>100%</dd></div>
-          <div><dt>风格</dt><dd>清爽</dd></div>
+          <div><dt>储存</dt><dd>本地</dd></div>
+          <div><dt>类型</dt><dd>文件</dd></div>
+          <div><dt>状态</dt><dd>可扩展</dd></div>
         </dl>
       </aside>
     </section>
@@ -58,74 +60,115 @@
     <section class="section split" id="about" aria-labelledby="about-title">
       <div>
         <p class="eyebrow">About</p>
-        <h2 id="about-title">关于我</h2>
+        <h2 id="about-title">懂你是什么</h2>
       </div>
       <div class="section-body">
-        <p data-site="about.body">我喜欢把复杂的事情变简单，也喜欢做能被真正用起来的东西。这个网站先用通用内容占位，之后你可以把它改成个人主页、作品集、博客首页，或者一个创业项目介绍页。</p>
-        <ul class="pill-list" aria-label="我的关键词">
-          <li>学习</li>
-          <li>创造</li>
-          <li>产品</li>
-          <li>效率</li>
+        <p>懂你是一个可以继续改造的网站。现在它先做成个人资料收纳站：你可以把论文、文章、学习笔记、项目资料放进文件库里，方便自己整理和下载。</p>
+        <p class="soft-warning">注意：当前版本是“浏览器本地储存”。换电脑、换浏览器，或者清理浏览器数据后，里面保存的文件可能看不到。真正跨设备同步需要后续加云端数据库和登录系统。</p>
+        <ul class="pill-list" aria-label="文件类型示例">
+          <li>论文 PDF</li>
+          <li>文章资料</li>
+          <li>学习笔记</li>
+          <li>项目文件</li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="projects" aria-labelledby="projects-title">
+    <section class="section library" id="library" aria-labelledby="library-title">
       <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2 id="projects-title">可以展示的内容</h2>
-        <p>先放三个示例卡片，之后可以换成你的真实项目、文章、服务或作品。</p>
+        <p class="eyebrow">Library</p>
+        <h2 id="library-title">文件库</h2>
+        <p>把论文、文章、笔记等文件保存到当前浏览器。适合临时整理资料，不适合存放账号密码、身份证、合同等敏感内容。</p>
       </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <span class="card-number">01</span>
-          <h3>我的作品集</h3>
-          <p>展示你做过的项目、截图、链接和成果。适合放设计、代码、运营案例。</p>
-          <a href="#contact" aria-label="了解我的作品集">了解更多</a>
-        </article>
-        <article class="project-card accent-card">
-          <span class="card-number">02</span>
-          <h3>我的记录本</h3>
-          <p>写学习笔记、读书总结、灵感碎片，把长期积累变成可见资产。</p>
-          <a href="#notes" aria-label="查看我的记录本">查看想法</a>
-        </article>
-        <article class="project-card">
-          <span class="card-number">03</span>
-          <h3>我的服务页</h3>
-          <p>如果你以后想接项目，可以在这里说明你能提供什么、流程和联系方式。</p>
-          <a href="#contact" aria-label="联系我了解服务">联系我</a>
-        </article>
+
+      <div class="library-layout">
+        <form class="library-form" id="file-form">
+          <div class="form-grid">
+            <label>
+              文件标题
+              <input id="file-title" name="title" type="text" placeholder="例如：AI论文阅读笔记" autocomplete="off" />
+            </label>
+            <label>
+              文件类型
+              <select id="file-category" name="category">
+                <option value="论文">论文</option>
+                <option value="文章">文章</option>
+                <option value="笔记">笔记</option>
+                <option value="资料">资料</option>
+                <option value="其它">其它</option>
+              </select>
+            </label>
+            <label class="full">
+              标签
+              <input id="file-tags" name="tags" type="text" placeholder="用逗号分隔，例如：AI, 写作, 研究" autocomplete="off" />
+            </label>
+            <label class="full">
+              说明
+              <textarea id="file-note" name="note" rows="3" placeholder="可以写这份文件为什么重要、哪里要重点看。"></textarea>
+            </label>
+            <label class="file-drop full">
+              <span>选择文件</span>
+              <strong>支持 PDF、Word、TXT、Markdown、PPT、Excel、ZIP 等常见文件</strong>
+              <input id="file-input" name="file" type="file" accept=".pdf,.doc,.docx,.txt,.md,.rtf,.ppt,.pptx,.xls,.xlsx,.csv,.zip" />
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="submit">保存到文件库</button>
+            <button class="button ghost danger" type="button" id="clear-library">清空文件库</button>
+          </div>
+          <p class="form-status" id="file-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="privacy-note">
+          <h3>安全提醒</h3>
+          <ul>
+            <li>文件只保存在当前浏览器，不会上传到 GitHub。</li>
+            <li>别人打开公网网站，看不到你浏览器里存的文件。</li>
+            <li>不要存身份证、密码、合同、私密论文等敏感文件。</li>
+            <li>想跨设备同步，需要后续增加登录和云端储存。</li>
+          </ul>
+        </aside>
       </div>
+
+      <div class="library-toolbar">
+        <h3>我的文件</h3>
+        <span id="library-count">0 个文件</span>
+      </div>
+      <div class="file-list" id="file-list" aria-live="polite"></div>
     </section>
 
-    <section class="section notes" id="notes" aria-labelledby="notes-title">
+    <section class="section guide" id="guide" aria-labelledby="guide-title">
       <div class="section-heading">
-        <p class="eyebrow">Notes</p>
-        <h2 id="notes-title">最近想法</h2>
+        <p class="eyebrow">Guide</p>
+        <h2 id="guide-title">使用说明</h2>
       </div>
-      <div class="note-list">
+      <div class="guide-grid">
         <article>
-          <time datetime="2026-06-09">2026-06-09</time>
-          <h3>从一个简单网站开始</h3>
-          <p>先有一个能打开、能修改、看起来舒服的网站，再慢慢加内容、加页面、加功能。</p>
+          <span>01</span>
+          <h3>先选择文件</h3>
+          <p>填标题、类型、标签和说明，然后选择论文或文章文件，点击保存。</p>
         </article>
         <article>
-          <time datetime="2026-06-09">2026-06-09</time>
-          <h3>内容比复杂功能更重要</h3>
-          <p>网站真正有价值的地方，是让别人快速理解你是谁、你在做什么、你能带来什么。</p>
+          <span>02</span>
+          <h3>随时下载</h3>
+          <p>保存后的文件会出现在列表里，可以点击下载，也可以删除。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>后续可升级</h3>
+          <p>如果你想让不同电脑都能看到文件，需要加云端储存和登录功能。</p>
         </article>
       </div>
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-card">
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">后续想怎么改都可以</h2>
-        <p>你可以告诉我：想换成什么名字、头像、配色、栏目、文案、项目，我可以继续帮你改成更像“你”的网站。</p>
+        <p class="eyebrow">Next</p>
+        <h2 id="contact-title">懂你还可以继续变强</h2>
+        <p>下一步可以加搜索、分类筛选、论文摘要、在线预览、云端同步、登录权限等功能。</p>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
-          <button class="button ghost" type="button" id="copy-path">复制网站路径</button>
+          <a class="button primary" href="#library">去文件库</a>
+          <button class="button ghost" type="button" id="copy-path">复制本地路径</button>
         </div>
         <p class="copy-result" id="copy-result" role="status" aria-live="polite"></p>
       </div>
@@ -133,10 +176,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> 我的个人网站。由静态 HTML / CSS / JS 制作。</p>
+    <p>© <span id="year"></span> 懂你。一个可以继续修改的个人文件库网站。</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
