@@ -32,3 +32,22 @@
 - 不要使用常用密码。
 
 如果要做成真正产品，需要后续增加后端、数据库、登录鉴权、云同步和真实网页截图服务。
+
+## 电脑软件版本
+
+现在项目也支持打包成 Windows 桌面软件。
+
+本地运行：
+
+```powershell
+npm install
+npm run desktop
+```
+
+生成可双击运行的 Windows 版本：
+
+```powershell
+npm run dist
+```
+
+生成后的文件会放在 `release` 目录。
